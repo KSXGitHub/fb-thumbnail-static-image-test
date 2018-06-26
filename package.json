@@ -10,7 +10,9 @@
     "build": "next build",
     "start": "node index.js",
     "deploy": "jest --coverage && next build && now",
-    "heroku-postbuild": "next build"
+    "heroku-postbuild": "next build",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -28,7 +30,8 @@
     "@types/react-dom": "^16.0.3",
     "next": "^4.2.3",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "snyk": "^1.85.0"
   },
   "devDependencies": {
     "gh-pages": "^1.1.0",
@@ -39,5 +42,6 @@
   },
   "engines": {
     "node": ">= 8.9.0"
-  }
+  },
+  "snyk": true
 }
